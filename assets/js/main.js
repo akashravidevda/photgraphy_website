@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3. Mobile Drawer Toggle & Morphing Hamburger
   if (mobileToggle && mobileDrawer) {
+    const drawerCloseBtns = document.querySelectorAll('#mobileDrawerClose, .nav-drawer-close-btn');
+
     function closeDrawer() {
       mobileDrawer.classList.remove('open');
       mobileToggle.classList.remove('is-active');
@@ -60,7 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = 'hidden';
     }
 
-    mobileToggle.addEventListener('click', () => {
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isOpen = mobileDrawer.classList.contains('open');
       if (isOpen) {
         closeDrawer();
@@ -69,9 +72,24 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Close button click
+    drawerCloseBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        closeDrawer();
+      });
+    });
+
     // Close on link click
     mobileNavLinks.forEach((link) => {
       link.addEventListener('click', closeDrawer);
+    });
+
+    // Close on click outside / drawer backdrop
+    mobileDrawer.addEventListener('click', (e) => {
+      if (e.target === mobileDrawer) {
+        closeDrawer();
+      }
     });
 
     // Close on Escape key

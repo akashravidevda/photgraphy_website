@@ -561,7 +561,7 @@
 
 @media (max-width: 768px) {
   .site-footer-upgrade {
-    padding: 45px 0 25px;
+    padding: 45px 0 110px; /* Generous clearance for fixed mobile-action-bar */
   }
   .footer-top-ribbon {
     flex-direction: column;
@@ -602,9 +602,22 @@
   .footer-pillars-row {
     justify-content: space-between;
   }
+  .footer-credit-wrap {
+    justify-content: center;
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #A3968B;
+  }
+  .footer-kaxon-link {
+    font-size: 0.82rem;
+    color: #E8B97C;
+  }
 }
 
 @media (max-width: 480px) {
+  .site-footer-upgrade {
+    padding: 40px 0 115px;
+  }
   .footer-main-grid {
     grid-template-columns: 1fr 1fr;
     gap: 28px 14px;
@@ -629,6 +642,11 @@
   }
   .footer-script-bottom-note {
     font-size: 1.35rem;
+  }
+  .footer-credit-wrap {
+    font-size: 0.76rem;
+    flex-wrap: wrap;
+    gap: 4px;
   }
 }
 

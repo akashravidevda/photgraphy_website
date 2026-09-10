@@ -135,6 +135,24 @@ $csrf_token = generate_csrf_token();
 
   <!-- Fullscreen Luxury Mobile Navigation Drawer -->
   <div class="nav-mobile-drawer-upgrade" id="mobileNavDrawer" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <div class="nav-drawer-brand">
+        <div class="nav-brand-icon-wrap" style="width:38px;height:38px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+        </div>
+        <span style="font-family:'Cormorant Garamond', Georgia, serif; font-size:1.15rem; font-weight:600; letter-spacing:0.2em; color:#FFFFFF;">SWAMINI</span>
+      </div>
+      <button class="nav-drawer-close-btn" id="mobileDrawerClose" aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
     <div class="nav-mobile-links-list">
       <a href="#home" class="nav-mobile-item-link"><span class="label">Home</span><span class="num">01</span></a>
       <a href="#about" class="nav-mobile-item-link"><span class="label">About Navanit</span><span class="num">02</span></a>
@@ -160,6 +178,13 @@ $csrf_token = generate_csrf_token();
         </svg>
         <span>Call Navanit: +91 7276505046</span>
       </a>
+      <div class="nav-mobile-credits" style="text-align:center; margin-top:8px; font-family:'Inter', sans-serif; font-size:0.75rem; color:#8C8075;">
+        <span>Website Designed &amp; Developed by </span>
+        <a href="https://kaxon.in" target="_blank" rel="noopener" class="footer-kaxon-link" style="font-size:0.75rem; display:inline-flex;">
+          <span>Kaxon</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:10px;height:10px;"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 
