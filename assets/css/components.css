@@ -1,0 +1,666 @@
+/* ==========================================================================
+   Swamini Photography - Components Stylesheet (Reference UI Polish)
+   ========================================================================== */
+
+/* 1. Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 24px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover svg {
+  transform: translateX(3px);
+}
+
+.btn-primary, .btn-gold {
+  background-color: var(--gold);
+  color: #FFFFFF;
+  border: 1px solid var(--gold);
+  box-shadow: 0 4px 14px rgba(185, 138, 88, 0.25);
+}
+
+.btn-primary:hover, .btn-gold:hover {
+  background-color: var(--gold-hover);
+  border-color: var(--gold-hover);
+  box-shadow: 0 6px 20px rgba(185, 138, 88, 0.35);
+}
+
+.btn-gold-light {
+  background-color: var(--gold-light);
+  color: var(--dark);
+  border: 1px solid var(--gold-light);
+}
+
+.btn-gold-light:hover {
+  background-color: var(--gold);
+  color: #FFFFFF;
+  border-color: var(--gold);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 253, 252, 0.08);
+  color: var(--warm-white);
+  border: 1px solid rgba(255, 253, 252, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 253, 252, 0.16);
+  border-color: rgba(255, 253, 252, 0.45);
+}
+
+.btn-outline-gold {
+  background-color: transparent;
+  color: var(--gold-light);
+  border: 1px solid var(--gold-light);
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--gold);
+  color: #FFFFFF;
+  border-color: var(--gold);
+}
+
+.btn-outline-dark {
+  background-color: transparent;
+  color: var(--dark);
+  border: 1px solid var(--dark);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--dark);
+  color: #FFFFFF;
+}
+
+.btn-phone-pill {
+  background-color: rgba(255, 253, 252, 0.06);
+  color: var(--warm-white);
+  border: 1px solid rgba(255, 253, 252, 0.15);
+  font-size: 0.8125rem;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+}
+
+.btn-phone-pill:hover {
+  background-color: rgba(255, 253, 252, 0.12);
+  border-color: var(--gold-light);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.78rem;
+}
+
+.btn-lg {
+  padding: 13px 28px;
+  font-size: 0.92rem;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* 2. Handwritten Annotations & Script Highlights */
+.script-note {
+  font-family: var(--font-script);
+  font-size: 1.65rem;
+  color: var(--gold-light);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  transform: rotate(-3deg);
+  display: inline-block;
+}
+
+.script-note-dark {
+  color: var(--gold);
+}
+
+/* 3. Section Eyebrows & Dividers */
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.section-eyebrow.with-dots::before,
+.section-eyebrow.with-dots::after {
+  content: '·';
+  font-size: 1.2rem;
+  line-height: 0;
+  color: var(--gold);
+}
+
+/* 4. 4-Column Responsive Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  background-color: var(--dark-warm);
+  border: 1px solid var(--border-gold-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-gold-medium);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.service-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #0d0c0b;
+}
+
+.service-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.service-card:hover .service-media img {
+  transform: scale(1.04);
+}
+
+.service-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(23, 21, 20, 0.7) 100%);
+}
+
+.service-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--warm-white);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.service-desc {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--muted-text);
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.service-pricing-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.service-price-label {
+  font-size: 0.75rem;
+  color: var(--muted-text);
+}
+
+.service-price-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gold-light);
+}
+
+.service-card-btn {
+  width: 100%;
+  padding: 8px 14px;
+  font-size: 0.78rem;
+  background-color: var(--gold-light);
+  color: var(--dark);
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.service-card-btn:hover {
+  background-color: var(--gold);
+  color: #FFFFFF;
+}
+
+.service-card-btn.outline {
+  background-color: transparent;
+  color: var(--gold-light);
+  border: 1px solid var(--border-gold-subtle);
+}
+
+.service-card-btn.outline:hover {
+  background-color: var(--gold-light);
+  color: var(--dark);
+  border-color: var(--gold-light);
+}
+
+/* 5. Intro Column 3 Feature Badges */
+.intro-features-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.intro-feature-pill {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--light-border);
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px rgba(40, 25, 15, 0.04);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.intro-feature-pill:hover {
+  transform: translateX(4px);
+  border-color: var(--gold-light);
+}
+
+.intro-feature-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--cream);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.intro-feature-title {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 2px;
+}
+
+.intro-feature-sub {
+  font-size: 0.75rem;
+  color: var(--muted-text);
+}
+
+/* 6. Package Pricing Cards (Exact Reference Design) */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 960px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.package-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--light-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  position: relative;
+}
+
+.package-card.featured {
+  background-color: #FCF7F0;
+  border-color: var(--gold);
+  box-shadow: 0 12px 32px rgba(185, 138, 88, 0.15);
+}
+
+.package-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.package-header-layout {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.package-thumb {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.package-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.package-details {
+  flex-grow: 1;
+}
+
+.package-name {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.package-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.package-feature-bullet {
+  font-size: 0.78rem;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.package-feature-bullet::before {
+  content: '•';
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.package-footer-row {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--light-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.package-price-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.package-price-caption {
+  font-size: 0.7rem;
+  color: var(--muted-text);
+  text-transform: uppercase;
+}
+
+.package-price-value {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+/* 7. Testimonial Cards */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.testimonial-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--light-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.testimonial-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid var(--cream);
+}
+
+.testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-headline {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.testimonial-quote-icon {
+  color: var(--gold);
+  margin-right: 4px;
+}
+
+.testimonial-text {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--muted-text);
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.testimonial-author-row {
+  font-size: 0.78rem;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.testimonial-author-row span {
+  color: var(--muted-text);
+  font-weight: 400;
+}
+
+/* 8. Lightbox Modal */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 9, 8, 0.96);
+  backdrop-filter: blur(12px);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-modal);
+}
+
+.lightbox-info {
+  margin-top: 14px;
+  text-align: center;
+  color: var(--warm-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+}
+
+.lightbox-caption {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: var(--warm-white);
+  cursor: pointer;
+  padding: 8px;
+  z-index: 10;
+  transition: transform var(--transition-fast);
+}
+
+.lightbox-close:hover {
+  transform: rotate(90deg);
+  color: var(--gold-light);
+}
+
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(42, 33, 29, 0.6);
+  border: 1px solid rgba(255, 253, 252, 0.2);
+  color: var(--warm-white);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.lightbox-nav-btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+
+/* 9. Floating Mobile Sticky Action Bar */
+.mobile-action-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 600;
+  background-color: rgba(23, 21, 20, 0.96);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(185, 138, 88, 0.25);
+  padding: 10px 16px;
+}
+
+@media (max-width: 768px) {
+  .mobile-action-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+.mobile-action-bar .btn {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 0.8125rem;
+}

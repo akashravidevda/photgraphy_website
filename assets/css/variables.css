@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Swamini Photography & Cinematography - Reference Design System Tokens
+   ========================================================================== */
+
+:root {
+  /* Core Color Palette from Reference UI */
+  --dark: #171514;
+  --dark-rgb: 23, 21, 20;
+  --dark-warm: #211A17;
+  --dark-panel: #27201D;
+  --cream: #F7F0E7;
+  --cream-rgb: 247, 240, 231;
+  --warm-white: #FFFDFC;
+  --warm-white-rgb: 255, 253, 252;
+  --gold: #B98A58;
+  --gold-rgb: 185, 138, 88;
+  --gold-light: #D9BC93;
+  --gold-hover: #a37544;
+  --muted-text: #86786D;
+  --light-border: #E8DED4;
+  --white: #FFFFFF;
+  --black: #11100F;
+
+  /* Aliases */
+  --charcoal: var(--dark);
+  --deep-brown: var(--dark-warm);
+  --muted-gold: var(--gold);
+  --soft-gold: var(--gold-light);
+  --warm-gray: var(--muted-text);
+  --light-gray: var(--light-border);
+
+  /* Borders & Shadows */
+  --border-gold-subtle: rgba(217, 188, 147, 0.20);
+  --border-gold-medium: rgba(185, 138, 88, 0.40);
+  --shadow-subtle: 0 4px 20px rgba(40, 25, 15, 0.04);
+  --shadow-card: 0 10px 30px rgba(40, 25, 15, 0.06);
+  --shadow-hover: 0 16px 36px rgba(40, 25, 15, 0.12);
+  --shadow-gold: 0 8px 24px rgba(185, 138, 88, 0.28);
+  --shadow-modal: 0 25px 60px rgba(0, 0, 0, 0.5);
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-script: 'Caveat', 'Playwrite', cursive;
+
+  /* Spacing */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+  --space-5xl: 120px;
+
+  /* Layout */
+  --max-width: 1400px;
+  --header-height: 80px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-slow: 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
