@@ -1,5 +1,6 @@
 /* =============================================================================
    Swamini Photography - Upgraded Luxury Editorial Navigation Styles
+   (Exact Match to Mobile Reference UI & Desktop Glassmorphic Dock)
    ============================================================================= */
 
 /* 1. Header Outer Container */
@@ -8,11 +9,11 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 82px;
+  height: 84px;
   z-index: 999;
   display: flex;
   align-items: center;
-  background: linear-gradient(180deg, rgba(16, 12, 10, 0.85) 0%, rgba(16, 12, 10, 0.3) 60%, transparent 100%);
+  background: linear-gradient(180deg, rgba(14, 10, 8, 0.9) 0%, rgba(14, 10, 8, 0.4) 65%, transparent 100%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
               background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
@@ -22,12 +23,12 @@
 }
 
 .site-header-upgrade.scrolled {
-  height: 68px;
-  background-color: rgba(18, 14, 12, 0.94);
+  height: 70px;
+  background-color: rgba(18, 14, 12, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(179, 132, 77, 0.22);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .nav-container-inner {
@@ -37,13 +38,14 @@
   width: 100%;
 }
 
-/* 2. Brand Logo */
+/* 2. Brand Logo (Exact Reference UI) */
 .nav-brand-link {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .nav-brand-link:hover {
@@ -51,29 +53,34 @@
 }
 
 .nav-brand-icon-wrap {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: rgba(179, 132, 77, 0.12);
-  border: 1px solid rgba(179, 132, 77, 0.3);
+  background: rgba(26, 20, 17, 0.65);
+  border: 1px solid rgba(215, 185, 138, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #C5A880;
-  transition: all 0.3s ease;
+  color: #E8D3B9;
+  transition: all 0.35s ease;
   flex-shrink: 0;
 }
 
 .nav-brand-link:hover .nav-brand-icon-wrap {
-  background: #9E6B3F;
-  border-color: #9E6B3F;
+  border-color: #E8D3B9;
+  background: rgba(158, 107, 63, 0.35);
   color: #FFFFFF;
-  box-shadow: 0 0 16px rgba(179, 132, 77, 0.4);
+  box-shadow: 0 0 18px rgba(215, 185, 138, 0.45);
 }
 
 .nav-brand-icon-wrap svg {
-  width: 20px;
-  height: 20px;
+  width: 23px;
+  height: 23px;
+  stroke: currentColor;
+  stroke-width: 1.5;
 }
 
 .nav-brand-text {
@@ -83,24 +90,28 @@
 
 .nav-brand-title {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.45rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
   color: #FFFFFF;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 .nav-brand-subtitle {
   font-family: 'Inter', sans-serif;
-  font-size: 0.58rem;
+  font-size: 0.52rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
-  color: #B3844D;
+  letter-spacing: 0.28em;
+  color: #D7B98A;
   text-transform: uppercase;
-  margin-top: 3px;
+  line-height: 1.35;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* 3. Center Navigation Pill Dock */
+/* 3. Center Navigation Pill Dock (Desktop) */
 .nav-center-dock {
   display: flex;
   align-items: center;
@@ -200,46 +211,86 @@
   transform: rotate(12deg) scale(1.1);
 }
 
+/* 5. Luxury WhatsApp Us Pill Button (Exact Reference UI) */
 .nav-whatsapp-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: #9E6B3F;
+  gap: 10px;
+  background: linear-gradient(135deg, #B5834E 0%, #8A572B 100%);
+  border: 1px solid rgba(245, 222, 192, 0.45);
   color: #FFFFFF;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.84rem;
-  font-weight: 600;
-  padding: 9px 20px;
+  padding: 7px 18px 7px 12px;
   border-radius: 50px;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(158, 107, 63, 0.35);
+  box-shadow: 0 4px 18px rgba(138, 87, 43, 0.4);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
 }
 
-.nav-whatsapp-btn svg {
-  width: 15px;
-  height: 15px;
+.nav-whatsapp-icon-wrap {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #FFFFFF;
+}
+
+.nav-whatsapp-icon-wrap svg {
+  width: 20px;
+  height: 20px;
   fill: currentColor;
 }
 
+.nav-whatsapp-text-wrap {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.nav-whatsapp-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.nav-whatsapp-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #F2DEC4;
+  line-height: 1;
+  margin-top: 2px;
+  display: block;
+}
+
 .nav-whatsapp-btn:hover {
-  background: #84552F;
+  background: linear-gradient(135deg, #C2905A 0%, #996232 100%);
+  border-color: rgba(255, 235, 210, 0.6);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(158, 107, 63, 0.45);
+  box-shadow: 0 8px 24px rgba(138, 87, 43, 0.55);
 }
 
 .nav-whatsapp-btn:active {
   transform: translateY(0);
 }
 
-/* 5. Mobile Hamburger Toggle */
+/* 6. Mobile Hamburger Toggle (Exact Reference UI with Gold Accent Dot) */
 .nav-hamburger-btn {
   display: none;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: #FFFFFF;
   cursor: pointer;
   align-items: center;
@@ -247,16 +298,37 @@
   position: relative;
   transition: all 0.3s ease;
   z-index: 1001;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
 }
 
 .nav-hamburger-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: #B3844D;
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(215, 185, 138, 0.5);
+  box-shadow: 0 0 16px rgba(215, 185, 138, 0.25);
+}
+
+/* Illuminated Gold Notification Dot at 1-2 o'clock */
+.nav-hamburger-dot {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #E8B97C;
+  box-shadow: 0 0 8px rgba(232, 185, 124, 0.95);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-hamburger-btn.is-active .nav-hamburger-dot {
+  opacity: 0;
 }
 
 .nav-hamburger-icon {
-  width: 20px;
-  height: 14px;
+  width: 18px;
+  height: 12px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -272,9 +344,9 @@
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Morph to Close 'X' when Open */
+/* Morph to Close 'X' when Drawer is Open */
 .nav-hamburger-btn.is-active .nav-hamburger-icon span:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
+  transform: translateY(5px) rotate(45deg);
   background: #E8B97C;
 }
 
@@ -284,11 +356,11 @@
 }
 
 .nav-hamburger-btn.is-active .nav-hamburger-icon span:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
+  transform: translateY(-5px) rotate(-45deg);
   background: #E8B97C;
 }
 
-/* 6. Fullscreen Mobile Navigation Drawer */
+/* 7. Fullscreen Mobile Navigation Drawer */
 .nav-mobile-drawer-upgrade {
   position: fixed;
   inset: 0;
@@ -316,7 +388,7 @@
 .nav-mobile-links-list {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
   margin-top: 10px;
 }
 
@@ -366,7 +438,7 @@
 }
 
 /* =============================================================================
-   Responsive Breakpoints
+   Responsive Breakpoints (Preserving Desktop Layout)
    ============================================================================= */
 @media (max-width: 1080px) {
   .nav-center-dock {
@@ -384,6 +456,9 @@
 }
 
 @media (max-width: 960px) {
+  .site-header-upgrade {
+    height: 76px;
+  }
   .nav-center-dock {
     display: none;
   }
@@ -393,38 +468,47 @@
   .nav-hamburger-btn {
     display: flex;
   }
+  .nav-actions-right {
+    gap: 12px;
+  }
 }
 
 @media (max-width: 480px) {
   .site-header-upgrade {
-    height: 70px;
+    height: 72px;
+  }
+  .nav-brand-link {
+    gap: 10px;
   }
   .nav-brand-icon-wrap {
-    width: 36px;
-    height: 36px;
+    width: 42px;
+    height: 42px;
   }
   .nav-brand-icon-wrap svg {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
   }
   .nav-brand-title {
     font-size: 1.25rem;
+    letter-spacing: 0.22em;
   }
   .nav-brand-subtitle {
-    font-size: 0.52rem;
+    font-size: 0.48rem;
+    letter-spacing: 0.24em;
   }
   .nav-whatsapp-btn {
-    padding: 7px 12px;
-    font-size: 0.76rem;
-    gap: 6px;
+    padding: 6px 14px 6px 10px;
+    gap: 8px;
   }
-  .nav-whatsapp-btn svg {
-    width: 14px;
-    height: 14px;
+  .nav-whatsapp-title {
+    font-size: 0.8rem;
+  }
+  .nav-whatsapp-subtitle {
+    font-size: 0.48rem;
   }
   .nav-hamburger-btn {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
   }
   .nav-mobile-drawer-upgrade {
     padding: 85px 20px 30px;
@@ -435,5 +519,27 @@
   }
   .nav-mobile-script-tag {
     font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-brand-title {
+    font-size: 1.12rem;
+  }
+  .nav-brand-subtitle {
+    font-size: 0.44rem;
+  }
+  .nav-whatsapp-btn {
+    padding: 6px 10px 6px 8px;
+  }
+  .nav-whatsapp-title {
+    font-size: 0.74rem;
+  }
+  .nav-whatsapp-subtitle {
+    font-size: 0.44rem;
+  }
+  .nav-hamburger-btn {
+    width: 40px;
+    height: 40px;
   }
 }
