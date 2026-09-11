@@ -225,6 +225,8 @@
   line-height: 1.1;
   color: var(--warm-white);
   margin-bottom: 14px;
+  text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 .hero-headline em {
@@ -232,22 +234,40 @@
   font-style: italic;
   color: var(--gold-light);
   font-weight: 400;
+  padding-bottom: 2px;
+  display: inline-block;
 }
 
 .hero-services-ticker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px 10px;
   font-size: 0.85rem;
   color: var(--gold-light);
-  margin-bottom: 12px;
-  letter-spacing: 0.05em;
-  font-weight: 400;
+  margin-bottom: 14px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+.hero-services-ticker span {
+  white-space: nowrap;
+}
+
+.hero-services-ticker .ticker-dot {
+  color: rgba(217, 188, 147, 0.45);
+  font-size: 0.75rem;
 }
 
 .hero-subtext {
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.62;
   color: #D9D2CB;
   margin-bottom: 24px;
   max-width: 580px;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
 }
 
 .hero-actions-row {
@@ -311,18 +331,19 @@
     padding-bottom: 40px;
   }
   .hero-headline {
-    font-size: clamp(2.1rem, 8vw, 2.9rem);
+    font-size: clamp(2rem, 7.8vw, 2.75rem);
     line-height: 1.15;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
   .hero-services-ticker {
-    font-size: 0.78rem;
-    margin-bottom: 10px;
+    font-size: 0.75rem;
+    gap: 4px 8px;
+    margin-bottom: 12px;
   }
   .hero-subtext {
     font-size: 0.88rem;
-    line-height: 1.55;
-    margin-bottom: 20px;
+    line-height: 1.58;
+    margin-bottom: 22px;
   }
   .hero-actions-row {
     gap: 12px;
@@ -334,11 +355,27 @@
     justify-content: center;
   }
   .hero-trust-bar {
-    gap: 14px 20px;
+    gap: 12px 18px;
     padding-top: 14px;
   }
   .trust-pill-item {
     font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-headline {
+    font-size: 1.85rem;
+  }
+  .hero-services-ticker {
+    font-size: 0.7rem;
+    gap: 3px 6px;
+  }
+  .hero-subtext {
+    font-size: 0.82rem;
+  }
+  .trust-pill-item {
+    font-size: 0.7rem;
   }
 }
 

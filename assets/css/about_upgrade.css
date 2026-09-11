@@ -323,10 +323,12 @@
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 2.85rem;
   font-weight: 600;
-  line-height: 1.12;
+  line-height: 1.14;
   color: #1A1513;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   letter-spacing: -0.02em;
+  text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 .about-main-title em {
@@ -334,9 +336,15 @@
   font-weight: 500;
   color: #B3844D;
   display: block;
+  padding-bottom: 2px;
 }
 
 .about-keywords-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 6px 10px;
   font-family: 'Inter', sans-serif;
   font-size: 0.76rem;
   font-weight: 700;
@@ -346,12 +354,23 @@
   text-transform: uppercase;
 }
 
+.about-keywords-row span {
+  white-space: nowrap;
+}
+
+.about-keywords-row .kw-dot {
+  color: #B3844D;
+  font-size: 0.75rem;
+}
+
 .about-desc-p1 {
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   line-height: 1.65;
   color: #554A43;
   margin-bottom: 16px;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
 }
 
 .about-desc-p2 {
@@ -360,6 +379,8 @@
   line-height: 1.65;
   color: #6B5E56;
   margin-bottom: 30px;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
 }
 
 .about-desc-p2 strong {
@@ -657,26 +678,27 @@
   }
   .about-col-left {
     max-width: 500px;
-    margin: 0 auto;
     width: 100%;
   }
   .about-col-center {
-    text-align: center;
+    text-align: left;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0;
   }
   .about-eyebrow-line {
-    justify-content: center;
+    justify-content: flex-start;
+  }
+  .about-keywords-row {
+    justify-content: flex-start;
   }
   .about-actions-row {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .about-stats-row {
-    justify-items: center;
+    justify-items: start;
   }
   .about-col-right {
     max-width: 500px;
-    margin: 0 auto;
     width: 100%;
   }
   .about-script-top-container,
@@ -692,6 +714,15 @@
   .about-main-title {
     font-size: clamp(1.85rem, 6.5vw, 2.2rem);
     line-height: 1.15;
+  }
+  .about-keywords-row {
+    font-size: 0.7rem;
+    gap: 5px 8px;
+    margin-bottom: 16px;
+  }
+  .about-desc-p1, .about-desc-p2 {
+    font-size: 0.88rem;
+    line-height: 1.6;
   }
   .about-mosaic-grid {
     grid-template-columns: 1fr 1fr;

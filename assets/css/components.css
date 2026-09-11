@@ -460,6 +460,27 @@
 }
 
 /* 7. Testimonial Cards */
+.testimonials-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .testimonials-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .testimonials-header-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -469,6 +490,7 @@
 @media (max-width: 900px) {
   .testimonials-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 }
 
@@ -512,33 +534,53 @@
 
 .testimonial-headline {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 1.12rem;
   font-weight: 600;
   color: var(--dark);
+  line-height: 1.25;
+  text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 .testimonial-quote-icon {
   color: var(--gold);
-  margin-right: 4px;
+  margin-right: 2px;
 }
 
 .testimonial-text {
-  font-size: 0.8125rem;
-  line-height: 1.6;
-  color: var(--muted-text);
+  font-size: 0.875rem;
+  line-height: 1.62;
+  color: #61564C;
   margin-bottom: 16px;
   flex-grow: 1;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
 }
 
 .testimonial-author-row {
-  font-size: 0.78rem;
+  font-size: 0.8125rem;
   color: var(--dark);
   font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .testimonial-author-row span {
   color: var(--muted-text);
   font-weight: 400;
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    padding: 18px 16px;
+    border-radius: 14px;
+  }
+  .testimonial-headline {
+    font-size: 1.05rem;
+  }
+  .testimonial-text {
+    font-size: 0.8125rem;
+    line-height: 1.58;
+  }
 }
 
 /* 8. Lightbox Modal */
