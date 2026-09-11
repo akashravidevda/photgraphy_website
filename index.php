@@ -1491,7 +1491,7 @@ $csrf_token = generate_csrf_token();
                 <span class="package-price-amount">₹25,000</span>
               </div>
               <a href="#contact" data-select-service="wedding" class="btn-package-pill primary" aria-label="Get Wedding Package Details">
-                <span>Get Wedding Details</span>
+                <span>Get Details</span>
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
@@ -1557,7 +1557,7 @@ $csrf_token = generate_csrf_token();
                 <span class="package-price-amount">₹3,000</span>
               </div>
               <a href="#contact" data-select-service="baby" class="btn-package-pill secondary" aria-label="Get Baby Shoot Package Details">
-                <span>Get Baby Shoot Details</span>
+                <span>Get Details</span>
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
@@ -1621,7 +1621,7 @@ $csrf_token = generate_csrf_token();
                 <span class="package-price-amount">₹4,000</span>
               </div>
               <a href="#contact" data-select-service="maternity" class="btn-package-pill secondary" aria-label="Get Maternity Package Details">
-                <span>Get Maternity Details</span>
+                <span>Get Details</span>
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
@@ -1708,12 +1708,12 @@ $csrf_token = generate_csrf_token();
        ========================================================================= -->
   <section class="section bg-cream" id="testimonials">
     <div class="container">
-      <div class="testimonials-header-row">
-        <div class="testimonials-header-left">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+        <div>
           <div class="section-eyebrow with-dots">CLIENT LOVE</div>
           <h2 class="section-title">What Our Clients Say</h2>
         </div>
-        <a href="#contact" class="btn btn-outline-dark btn-sm testimonials-header-btn">
+        <a href="#contact" class="btn btn-outline-dark btn-sm">
           <span>View More Reviews</span>
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>

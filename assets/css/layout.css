@@ -20,6 +20,22 @@
   padding-right: var(--space-lg);
 }
 
+@media (max-width: 640px) {
+  .container,
+  .container-narrow {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container,
+  .container-narrow {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 .section {
   padding-top: var(--space-4xl);
   padding-bottom: var(--space-4xl);

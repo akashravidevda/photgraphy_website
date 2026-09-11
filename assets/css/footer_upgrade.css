@@ -564,13 +564,6 @@
     padding: 45px 0 110px; /* Generous clearance for fixed mobile-action-bar */
   }
   .footer-top-ribbon {
-    flex-direction: column;
-    text-align: center;
-    gap: 8px;
-    margin-bottom: 35px;
-  }
-  .footer-top-ribbon::before,
-  .footer-top-ribbon::after {
     display: none;
   }
   .footer-main-grid {
