@@ -57,7 +57,7 @@ $csrf_token = generate_csrf_token();
     "name": "Swamini Photography & Cinematography",
     "image": "assets/images/hero_cinematic_wedding.jpg",
     "telephone": "+917276505046",
-    "priceRange": "₹3,000 - ₹50,000+",
+    "priceRange": "₹4,500 - ₹50,000+",
     "founder": {
       "@type": "Person",
       "name": "Navanit Patil"
@@ -654,7 +654,7 @@ $csrf_token = generate_csrf_token();
             </p>
             <div class="service-card-price-row">
               <span class="service-card-price-caption">Starting From</span>
-              <span class="service-card-price-val">₹25,000</span>
+              <span class="service-card-price-val">₹35,000</span>
             </div>
             <a href="#contact" data-select-service="wedding" class="service-action-pill" aria-label="Enquire for Wedding Photography">
               <span>Enquire Now</span>
@@ -719,7 +719,7 @@ $csrf_token = generate_csrf_token();
             </p>
             <div class="service-card-price-row">
               <span class="service-card-price-caption">Starting From</span>
-              <span class="service-card-price-val">₹4,000</span>
+              <span class="service-card-price-val">₹4,500</span>
             </div>
             <a href="#contact" data-select-service="maternity" class="service-action-pill" aria-label="Book Maternity Shoot">
               <span>Book Now</span>
@@ -754,7 +754,7 @@ $csrf_token = generate_csrf_token();
             </p>
             <div class="service-card-price-row">
               <span class="service-card-price-caption">Starting From</span>
-              <span class="service-card-price-val">₹3,000</span>
+              <span class="service-card-price-val">₹4,500</span>
             </div>
             <a href="#contact" data-select-service="baby" class="service-action-pill" aria-label="Book Baby & Newborn Shoot">
               <span>Book Now</span>
@@ -1506,7 +1506,7 @@ $csrf_token = generate_csrf_token();
             <div class="package-card-footer">
               <div class="package-price-wrap">
                 <span class="package-price-label-text">STARTING FROM</span>
-                <span class="package-price-amount">₹25,000</span>
+                <span class="package-price-amount">₹35,000</span>
               </div>
               <a href="#contact" data-select-service="wedding" class="btn-package-pill primary" aria-label="Get Wedding Package Details">
                 <span>Get Details</span>
@@ -1572,7 +1572,7 @@ $csrf_token = generate_csrf_token();
             <div class="package-card-footer">
               <div class="package-price-wrap">
                 <span class="package-price-label-text">STARTING FROM</span>
-                <span class="package-price-amount">₹3,000</span>
+                <span class="package-price-amount">₹4,500</span>
               </div>
               <a href="#contact" data-select-service="baby" class="btn-package-pill secondary" aria-label="Get Baby Shoot Package Details">
                 <span>Get Details</span>
@@ -1636,7 +1636,7 @@ $csrf_token = generate_csrf_token();
             <div class="package-card-footer">
               <div class="package-price-wrap">
                 <span class="package-price-label-text">STARTING FROM</span>
-                <span class="package-price-amount">₹4,000</span>
+                <span class="package-price-amount">₹4,500</span>
               </div>
               <a href="#contact" data-select-service="maternity" class="btn-package-pill secondary" aria-label="Get Maternity Package Details">
                 <span>Get Details</span>
